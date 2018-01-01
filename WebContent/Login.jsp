@@ -7,7 +7,7 @@
         <title>Login Demo with JSP</title>
     </head>
     <body>
-        <form method="post" action="validate.jsp">
+        <form method="post" action="Validate.jsp">
             <center>
             <table border="1" cellpadding="5" cellspacing="2">
                 <thead>
@@ -17,7 +17,7 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Username</td>
+                        <td>User name</td>
                         <td><input type="text" name="username" required/></td>
                     </tr>
                     <tr>

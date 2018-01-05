@@ -10,12 +10,14 @@
         Class.forName("com.mysql.jdbc.Driver");  // MySQL database connection
         Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/seg?verifyServerCertificate=false&useSSL=true","seg", "seguridad"); 
         Statement st = conn.createStatement();
-        ResultSet rs;
-        rs = st.executeQuery("select * from members where uname='" + username + "' and pass='" + hash + "'");                     
-        if(rs.next())           
-           out.println("Valid login credentials");        
-        else
-           out.println("Invalid login credentials");            
+        int i = st.executeUpdate("insert into `members` (uname,pass) values ('"+username+"','"+hash+"')"); 
+        if (i > 0) {
+            //session.setAttribute("userid", user);
+            response.sendRedirect("Login.jsp");
+           // out.print("Registration Successfull!"+"<a href='index.jsp'>Go to Login</a>");
+        } else {
+        
+        }
    }
    catch(Exception e){       
        out.println(e);       

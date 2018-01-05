@@ -7,12 +7,12 @@
         <title>Login Demo with JSP</title>
     </head>
     <body>
-        <form method="post" action="Validate.jsp">
+        <form method="post" action="Register.jsp">
             <center>
             <table border="1" cellpadding="5" cellspacing="2">
                 <thead>
                     <tr>
-                        <th colspan="2">Ingrese</th>
+                        <th colspan="2">Registrese</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -25,14 +25,13 @@
                         <td><input type="password" name="password" required/></td>
                     </tr>
                     <tr>
-                        <td colspan="2" align="center"><input type="submit" value="Ingrese" />
+                        <td colspan="2" align="center"><input type="submit" value="Registrese" />
                             &nbsp;&nbsp;
                             <input type="reset" value="Resetea" />
                         </td>                        
                     </tr>                    
                 </tbody>
             </table>
-			<a href="registro.jsp">Registro</a>
             </center>
         </form>
     </body>

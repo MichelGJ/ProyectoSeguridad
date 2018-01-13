@@ -15,7 +15,7 @@
 	        Class.forName("com.mysql.jdbc.Driver");  // MySQL database connection
 	        Connection conn = DriverManager.getConnection(secreto.getDireccion(),secreto.getUser(), secreto.getPass()); 
 	        Statement st = conn.createStatement();
-	        int i = st.executeUpdate("insert into `members` (uname,pass) values ('"+username+"','"+hash+"')"); 
+	        int i = st.executeUpdate("insert into `members` (uname,pass,intentos) values ('"+username+"','"+hash+"',"+0+")"); 
 	        if (i > 0) {
 	            //session.setAttribute("userid", user);
 	            response.sendRedirect("Login.jsp");

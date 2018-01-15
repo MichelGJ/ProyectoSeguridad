@@ -11,8 +11,6 @@
     	int intentos=0;
     	String username = request.getParameter("username");   
         String password = request.getParameter("password");
-        String u="Michel";
-        String e="e10adc3949ba59abbe56e057f20f883e";
         String hash = MetodosHash.Hasheo(password);
         Class.forName("com.mysql.jdbc.Driver");  // MySQL database connection
         	 Connection conn = DriverManager.getConnection(secreto.getDireccion(),secreto.getUser(), secreto.getPass()); 
@@ -27,7 +25,9 @@
   		 intentos = rs2.getInt(1);
   		}
   		if (intentos==3)
-  			out.println("ya usaste 3 intentos");
+  		{	response.sendRedirect("Cambio.jsp");
+  			session.setAttribute("username", username);
+  		}
   		else
   		{     if(rs.next())           
              {   
@@ -38,6 +38,7 @@
              {  
             	 int i = st.executeUpdate("UPDATE members SET intentos=intentos+1 WHERE uname='" + username + "'");  
             	 out.println("Invalid login credentials"); 
+            	
              }
   		}            
    }

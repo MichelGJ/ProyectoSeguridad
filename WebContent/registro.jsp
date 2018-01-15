@@ -25,6 +25,14 @@
                         <td><input type="password" name="password" required/></td>
                     </tr>
                     <tr>
+                        <td>Nombre de Mascota</td>
+                        <td><input type="text" name="pregunta1" required/></td>
+                    </tr>
+                    <tr>
+                        <td>Nombre de Colegio</td>
+                        <td><input type="text" name="pregunta2" required/></td>
+                    </tr>
+                    <tr>
                         <td colspan="2" align="center"><input type="submit" value="Registrese" />
                             &nbsp;&nbsp;
                             <input type="reset" value="Resetea" />
